@@ -1,0 +1,406 @@
+1.
+
+#include<stdio.h>
+int main()
+{
+int x;
+    printf("Enter the number");
+    scanf("%d",&x);
+      if(x>0)
+        printf("number is positive");
+      else
+        printf("number is non negative");
+
+return 0;
+}
+
+2.
+
+#include<stdio.h>
+int main()
+{
+int x;
+    printf("Enter the number");
+    scanf("%d",&x);
+      if(x%10==0||x%10==5)
+        printf("number is divisible by 5");
+      else
+        printf("number is not divisible by 5");
+
+return 0;
+}
+
+3.
+
+#include<stdio.h>
+int main()
+{
+int x;
+    printf("Enter the number");
+    scanf("%d",&x);
+      if(x%2==0)
+        printf("number is  even");
+      else
+        printf("number is odd ");
+
+return 0;
+}
+
+
+4.
+
+
+
+#include<stdio.h>
+int main()
+{
+int n;
+    printf("Enter the number");
+    scanf("%d",&n);
+     if((n&1)==0)
+     {
+       printf("number is even %d",n);
+     }
+     else
+     {
+         printf("number is odd %d",n);
+     }
+
+return 0;
+}
+
+
+5.
+
+#include<stdio.h>
+int main()
+{
+int n;
+    printf("Enter the number");
+    scanf("%d",&n);
+    if(n>99&&n<1000)
+    {
+        printf("number is three digit number ");
+    }
+    else
+    {
+        printf("number is not three  digit number ");
+    }
+
+return 0;
+}
+
+6.
+
+
+#include<stdio.h>
+int main()
+{
+int a ,b;
+    printf("Enter two number");
+    scanf("%d%d",&a,&b);
+    if(a>b)
+    {
+        printf("a is greater %d",a);
+    }
+    else if(b>a)
+    {
+        printf("b is greater %d",b);
+    }
+    else
+    {
+        printf("number is equal %d",a);
+    }
+
+return 0;
+}
+
+
+
+7.
+
+#include<stdio.h>
+int main()
+{
+int a ,c ,b,D=0;
+    printf("Enter the values a,b,c");
+    scanf("%d%d%d",&a,&b,&c);
+    D =b*b-4*a*c;
+    if(D>0)
+    {
+        printf("root is real and distict ");
+    }
+    else if(D<0)
+    {
+        printf("root is imaginary");
+    }
+     else
+    {
+       printf("real and equal");
+    }
+
+return 0;
+}
+
+8.
+
+#include<stdio.h>
+int main()
+{
+int y;
+    printf("Enter the year");
+    scanf("%d",&y);
+   if (y%100==0)
+   {
+       if(y%400==0)
+       {
+           printf("year is leap year");
+
+       }
+       else
+       {
+           printf("year is not leap year");
+       }
+
+
+   }
+   else
+    {
+        if(y%40==0)
+        {
+            printf("year is leap year");
+        }
+
+        else
+        {
+            printf("year is not leap year");
+        }
+
+
+    }
+
+return 0;
+}
+
+
+
+9.
+
+#include<stdio.h>
+int main()
+{
+int a ,b ,c;
+    printf("Enter three  numbers");
+    scanf("%d%d%d",&a,&b,&c);
+    if(a>b)
+    {
+        if(a>c)
+            printf("%d",a);
+        else
+            printf("%d",c);
+    }
+    else
+    {
+        if(b>c)
+            printf("%d",b);
+        else
+            printf("%d",c);
+    }
+return 0;
+}
+
+
+10.
+
+#include<stdio.h>
+int main()
+{
+float CP , SP ,p ,l;
+    printf("Enter CP and SP");
+    scanf("%f%f",&CP,&SP);
+    if (CP<SP)
+    {
+        p=((SP-CP)/CP)*100;
+        printf("profit is %f",p);
+    }
+    else if (CP>SP)
+    {
+        l=((CP-SP)/CP)*100;
+        printf("loss is %f",l);
+    }
+return 0;
+}
+
+
+11.
+
+#include<stdio.h>
+int main()
+{
+int m ,c,p,b,h;
+    printf("Enter the  marks of five subjects");
+    scanf("%d%d%d%d%d",&m,&p,&c,&b,&h);
+    if(m>=33&&p>=33&&c>=33&&b>=33&&h>=33)
+    {
+        printf("student is pass");
+    }
+    else
+    {
+        printf("student is fail");
+    }
+    return 0;
+}
+
+
+
+
+12.
+
+#include<stdio.h>
+int main()
+{
+char c;
+    printf("Enter the alphabet");
+    scanf("%c",&c);
+    if(c>='a'&& c<='z')
+    {
+        printf("alphabet is in lowercase %c",c);
+    }
+    else if(c>='A'&& c<='Z')
+    {
+        printf("alphabet is in uppercase %c",c);
+    }
+    else
+    {
+        printf("unidentified alphabet");
+    }
+
+return 0;
+}
+
+13.
+
+#include<stdio.h>
+int main()
+{
+int num;
+printf("enter the number ");
+scanf("%d",&num);
+if(num%3==0&&num%2==0)
+    printf("number is divisible");
+else
+    printf("number is not divisible");
+
+return 0;
+}
+
+
+14.
+
+#include<stdio.h>
+int main()
+{
+int num;
+printf("enter the number ");
+scanf("%d",&num);
+if(num%7==0||num%3==0)
+    printf("number is divisible");
+else
+    printf("number is not divisible");
+
+return 0;
+}
+
+15.
+
+#include<stdio.h>
+int main()
+{
+int num;
+printf("enter the number ");
+scanf("%d",&num);
+if(num>0)
+    printf("number is positive");
+else if(num<0)
+    printf("number is negative");
+else if(num==0)
+    printf("number is zero");
+
+return 0;
+}
+
+
+16.
+
+#include<stdio.h>
+int main()
+{
+char c;
+printf("enter the alphabet or digit");
+scanf("%c",&c);
+if(c>='A'&&c<='Z')
+    printf("alphabet is in uppercase");
+else if(c>='a'&&c<='z')
+    printf( "alphabet is in lowercase");
+else
+    printf("digit or special character");
+
+return 0;
+}
+
+17.
+
+#include<stdio.h>
+int main()
+{
+int a,b ,c;
+printf("enter the sides of triangle");
+scanf("%d%d%d",&a,&b,&c);
+if((a+b>c)&&(b+c>a)&&(c+a>b))
+    printf("triangle is possible ");
+else
+    printf("triangle is not possible");
+return 0;
+}
+
+
+18.
+
+#include<stdio.h>
+int main()
+{
+int n;
+printf("enter the month number");
+scanf("%d",&n);
+if (n==1)
+    printf("month is junuary and days is 31 ");
+else if (n==2)
+    printf("month is february and days is 28");
+else if (n==3)
+    printf("month is march and days is 31");
+else if (n==4)
+    printf("month is april and days is 30");
+else if (n==5)
+    printf("month is may and days is 31");
+else if (n==6)
+    printf("month is june and days is 30");
+else if (n==7)
+    printf("month is july and days is 31");
+else if (n==8)
+    printf("month is august and days is 31");
+else if (n==9)
+    printf("month is september and days is 30");
+else if (n==10)
+    printf("month is october and days is 31");
+else if (n==11)
+    printf("month is november and days is 30");
+else if (n==12)
+    printf("month is december and days is 31");
+else
+    printf("invalid month");
+
+
+return 0;
+}
+
+
