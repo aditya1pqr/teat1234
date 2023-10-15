@@ -1,0 +1,308 @@
+
+
+1.
+
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter A number upto series should be printed :- ");
+    scanf("%d",&n);
+    int t1=0;
+    int t2=1;
+    int nextterm=t1+t2;
+
+    for(int i=3;i<=n;i++)
+    {
+
+        t1=t2;
+        t2=nextterm;
+        nextterm=t1+t2;
+    }
+      printf("%d ",nextterm);
+    return 0;
+}
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+2.
+
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter A number upto series should be printed :- ");
+    scanf("%d",&n);
+    int t1=0;
+    int t2=1;
+    int nextterm=t1+t2;
+    printf("%d %d ",t1,t2);
+    for(int i=3;i<=n;i++)
+    {
+        printf("%d ",nextterm);
+        t1=t2;
+        t2=nextterm;
+        nextterm=t1+t2;
+    }
+    return 0;
+}
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+3.
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n;
+    printf("Enter number to check :- ");
+    scanf("%d",&n);
+    int k=5*n*n+4;
+    int l=5*n*n-4;
+int s=sqrt(k);
+int t=sqrt(l);
+
+    if((s*s==k)||(s*s==l))
+    {
+        printf("Number is in Fibonacci series ");
+    }
+    else
+    {
+        printf("Number not present in fibonacci series");
+
+    }
+    return 0;
+}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+4.
+
+#include<stdio.h>
+int main()
+{
+
+    int a,b;
+    printf("Enter two values");
+    scanf("%d %d",&a,&b);
+    int result=(a<b?a:b);
+    while(result!=1)
+    {
+        if(a%result==0&&b%result==0)
+        {
+            printf("%d",result);
+            break;
+        }
+        result--;
+    }
+    return 0;
+}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+5.
+
+#include<stdio.h>
+int main()
+{
+
+    int a,b,k;
+    printf("Enter two values");
+    scanf("%d %d",&a,&b);
+    int result=(a<b?a:b);
+    while(result!=0)
+    {
+        if(a%result==0&&b%result==0)
+        {
+           k=result;
+            break;
+        }
+        result--;
+    }
+    if(result==1)
+    {
+        printf("Number is co-prime");
+    }
+    else
+    {
+        printf("number is not co prime");
+    }
+    return 0;
+}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+6.
+
+
+#include<stdio.h>
+int main()
+{
+    int flag=0;
+for(int i=1;i<=100;i++)
+{
+    flag=0;
+    for(int j=2;j<i;j++)
+    {
+        if(i%j==0)
+        {
+           flag=1;
+           break;
+        }
+
+    }
+    if(flag==0)
+    {
+       printf("%d",i);
+    }
+}
+    return 0;
+}
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+7.
+
+#include<stdio.h>
+int main()
+{
+    int x,y;
+    printf("Enter two number x is first and y is last number");
+    scanf("%d %d",&x,&y);
+    int flag=0;
+for(int i=x;i<=y;i++)
+{
+    flag=0;
+    for(int j=2;j<i;j++)
+    {
+        if(i%j==0)
+        {
+           flag=1;
+           break;
+        }
+
+    }
+    if(flag==0)
+    {
+       printf("%d ",i);
+    }
+}
+    return 0;
+}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+8.
+
+#include<stdio.h>
+int main()
+{
+    int x;
+    printf("Enter a number under 10000");
+    scanf("%d",&x);
+    int flag=0;
+for(int i=x;i<=10000;i++)
+{
+    flag=0;
+    for(int j=2;j<i;j++)
+    {
+        if(i%j==0)
+        {
+           flag=1;
+           break;
+        }
+
+    }
+    if(flag==0)
+    {
+       printf("%d ",i);
+       break;
+    }
+}
+    return 0;
+}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+9.
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+   int n;
+   int count=0;
+   int sum=0;
+   int rem;
+   printf("Enter a number  :- ");
+   scanf("%d",&n);
+   int j=n;
+   while(n!=0)
+   {
+       rem=n%10;
+          n=n/10;
+          count++;
+
+   }
+   int l=j;
+   while(j!=0)
+   {
+        int rem=j%10;
+          j=j/10;
+          sum=sum+(pow(rem,count));
+   }
+   if(l==sum)
+   {
+       printf("Number is Armstrong number");
+
+   }
+   else
+   {
+        printf("Number is not Armstrong number");
+
+   }
+    return 0;
+}
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+10.
+
+#include <math.h>
+#include <stdio.h>
+ 
+int main()
+{
+    int i, sum, num, count = 0;
+    printf(
+        "All Armstrong number between 1 and 1000 are:\n");
+ 
+    for (i = 1; i <= 1000; i++) {
+        num = i;
+ 
+        while (num != 0) {
+            num /= 10;
+            count++;
+        }
+        num = i;
+        sum = pow(num % 10, count)
+              + pow((num % 100 - num % 10) / 10, count)
+              + pow((num % 1000 - num % 100) / 100, count);
+        if (sum == i) {
+            printf("%d ", i);
+        }
+        count = 0;
+    }
+}
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
