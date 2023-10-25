@@ -1,0 +1,342 @@
+1.
+
+
+#include<stdio.h>
+int lcm(int a,int b)
+{
+    int max;
+    max=a>b?a:b;
+    while(1)
+    {
+        if((max%a==0)&&(max%b==0))
+        {
+            return max;
+            break;
+        }
+        max++;
+
+    }
+}
+int main()
+{
+    int x,y;
+   printf("Enter two number ");
+    scanf("%d %d",&x,&y);
+    printf("%d",lcm(x,y));
+    return 0;
+}
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+2.
+
+
+#include<stdio.h>
+int hcf(int a,int b)
+{
+    int result=a<b?a:b;
+    while(1)
+    {
+     if(a%result==0 && b%result==0)
+     {
+         return result;
+     }
+     result--;
+    }
+}
+int main()
+{
+    int x,y;
+    printf("Enter to number");
+    scanf("%d %d",&x,&y);
+   printf("Hcf of %d and %d is %d",x,y,hcf(x,y)) ;
+
+    return 0;
+}
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+3.
+
+#include<stdio.h>
+int check_prime(int a)
+{
+
+    for(int i=2;i<a/2;i++)
+    {
+        if(a%i==0)
+        {
+            return 1;
+             break;
+        }
+        else
+        {
+            return 0;
+             break;
+        }
+
+    }
+}
+
+int main()
+{
+    int x;
+    printf("Enter a number");
+    scanf("%d",&x);
+    if(check_prime(x))
+    {
+        printf("Number is not prime");
+
+    }
+    else
+    {
+        printf("Number is  prime");
+    }
+
+
+    return 0;
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+4.
+
+#include<stdio.h>
+int next_prime(int x)
+{
+
+    int flag=0;
+for(int i=x;i<=10000;i++)
+{
+    flag=0;
+    for(int j=2;j<i;j++)
+    {
+        if(i%j==0)
+        {
+           flag=1;
+           break;
+        }
+
+    }
+    if(flag==0)
+    {
+       return i;
+       break;
+    }
+}
+}
+
+int main()
+{
+    int x;
+    printf("Enter a number under 10000  :- ");
+    scanf("%d",&x);
+    printf("%d",next_prime(x));
+
+    return 0;
+}
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+5.
+
+#include<stdio.h>
+void between_prime(int y)
+{
+       int flag=0;
+for(int i=2;i<=y;i++)
+{
+    flag=0;
+    for(int j=2;j<i;j++)
+    {
+        if(i%j==0)
+        {
+           flag=1;
+           break;
+        }
+
+    }
+    if(flag==0)
+    {
+       printf("%d ",i);
+    }
+}
+}
+
+int main()
+{
+      int x;
+    printf("Enter the end of number");
+    scanf("%d",&x);
+    between_prime(x);
+
+    return 0;
+}
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+6.
+
+#include<stdio.h>
+void between_prime(int x ,int y)
+{
+       int flag=0;
+for(int i=x;i<=y;i++)
+{
+    flag=0;
+    for(int j=2;j<i;j++)
+    {
+        if(i%j==0)
+        {
+           flag=1;
+           break;
+        }
+
+    }
+    if(flag==0)
+    {
+       printf("%d ",i);
+    }
+}
+}
+
+int main()
+{
+      int x,y;
+    printf("Enter two number x is first and y is last number");
+    scanf("%d %d",&x,&y);
+    between_prime(x,y);
+
+    return 0;
+}
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+7.
+
+
+#include<stdio.h>
+void facb(int n)
+{
+     int t1=0;
+    int t2=1;
+    int nextterm=t1+t2;
+    printf("%d %d ",t1,t2);
+    for(int i=3;i<=n;i++)
+    {
+        printf("%d ",nextterm);
+        t1=t2;
+        t2=nextterm;
+        nextterm=t1+t2;
+    }
+}
+
+int main()
+{
+    int n;
+    printf("Enter A number upto series should be printed :- ");
+    scanf("%d",&n);
+   facb(n);
+    return 0;
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+8.
+
+#include <stdio.h> 
+void printPascal(int n) 
+{ 
+    for (int line = 1; line <= n; line++) { 
+        for (int space = 1; space <= n - line; space++) 
+            printf("  "); 
+       
+        int coef = 1; 
+        for (int i = 1; i <= line; i++) { 
+            printf("%4d", coef); 
+            coef = coef * (line - i) / i; 
+        } 
+        printf("\n"); 
+    } 
+} 
+  
+int main() 
+{ 
+    int n = 5; 
+    printPascal(n); 
+    return 0; 
+}
+
+
+
+
+
+
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+9.
+
+
+
+#include<stdio.h>
+void square(int x)
+{
+    int result=x*x;
+    printf(" square of number %d is %d",x,result);
+}
+int main()
+{
+    int x;
+    printf("Enter two number");
+    scanf("%d",&x);
+    square(x);
+    return 0;
+}
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+10.
+
+
+#include<stdio.h>
+int fact(int x)
+{int fac1=1;
+int i;
+    for(int i=x;i>1;i--)
+    {
+       fac1=fac1*i;
+    }
+    return fact;
+}
+int main()
+{
+    int result=1;
+    for(int i=1;i<5;i++)
+    {
+        result=result+fact(i)/i;
+    }
+    printf("Result is %d" ,result);
+    return 0;
+}
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
