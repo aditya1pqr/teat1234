@@ -1,0 +1,253 @@
+1.
+
+#include<stdio.h>
+int main()
+{
+ int i; char str[20];
+ printf("enter the string :");
+ fgets(str,20,stdin);
+ for(i=0;str[i];i++);
+ printf("length of string is %d",i-1);
+ return 0;
+}
+
+
+
+2.
+
+
+#include<stdio.h>
+int main()
+{
+    char a[500];
+    char b;
+    int i,count = 0;
+    printf("enter the string  -> ");
+    fgets(a,20,stdin);
+    printf("Enter the character you want to search  ->");
+    scanf("%c",&b);
+    while(a[i]!='\0')
+    {
+        if(a[i]==b)
+        {
+            count++;
+        }
+        i++;
+    }
+    printf(" count -> %d ",count);
+    return 0;
+}
+
+
+3.
+
+
+#include<stdio.h>
+int main()
+{
+    char a[500];
+    char b;
+    int i,count = 0;
+    printf("enter the string  -> ");
+    fgets(a,20,stdin);
+    while(a[i]!='\0')
+    {
+        if(a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u'||a[i]=='A'||a[i]=='E'||a[i]=='I'||a[i]=='O'||a[i]=='U')
+        {
+            count++;
+        }
+        i++;
+    }
+    printf(" count -> %d ",count);
+    return 0;
+}
+
+
+
+4.
+
+
+
+#include<stdio.h>
+int main()
+{
+    char a[500];
+    char b;
+    int i,count = 0;
+    printf("enter the string  -> ");
+    fgets(a,20,stdin);
+    while(a[i]!='\0')
+    {
+      if(a[i]>=97&&a[i]<=122)
+        {
+            a[i]=a[i]-32;
+        }
+        i++;
+    }
+    printf(" %s ",a);
+    return 0;
+}
+
+
+
+5.
+
+#include<stdio.h>
+int main()
+{
+    char a[500];
+    char b;
+    int i,count = 0;
+    printf("enter the string  -> ");
+    fgets(a,20,stdin);
+    while(a[i]!='\0')
+    {
+      if(a[i]>=65&&a[i]<=90)
+        {
+            a[i]=a[i]+32;
+        }
+        i++;
+    }
+    printf(" %s ",a);
+    return 0;
+}
+
+
+6.
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[500];
+    char t;
+    int i=0;
+    printf("enter the string  -> ");
+    fgets(a,20,stdin);
+    int j=strlen(a)-1;
+    while(i<=j)
+    {
+        t=a[i];
+        a[i]=a[j];
+        a[j]=t;
+    i++;
+    j--;
+    }
+    printf(" %s",a);
+    return 0;
+}
+7.
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[500];
+    char t;
+    int i=0, countchar=0, countdigit=0, countspecial=0;
+    printf("enter the string  -> ");
+    fgets(a,20,stdin);
+    while(a[i]!='\0')
+    {
+        if (a[i]>='a'&&a[i]<='z'||a[i]>='A'&&a[i]<='Z')
+        {
+            countchar++;
+        }
+        else if(a[i]>='0'&&a[i]<='9')
+        {
+            countdigit++;
+        }
+        else
+        {
+            countspecial++;
+        }
+    i++;
+    }
+
+    printf(" alphabet is %d",countchar);
+    printf(" \n digit is %d",countdigit);
+    printf(" \n special character is %d",countspecial-1);
+    return 0;
+}
+
+
+8.
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[500];
+    char b[500];
+    int i;
+    printf("enter the string  -> ");
+    fgets(a,20,stdin);
+   int len=strlen(a);
+   for(i=0;i<len;i++)
+   {
+       b[i]=a[i];
+   }
+    printf("%s",b);
+    return 0;
+}
+
+
+
+9.
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[500];
+    char b[500];
+    char t;
+    int i,j;
+    printf("enter the string  -> ");
+    fgets(a,20,stdin);
+   int n=strlen(a);
+   for(i=0;i<n;i++)
+   {
+       for(j=i+1;j<n;j++)
+       {
+           if(a[i]>a[j])
+           {
+               t=a[i];
+               a[i]=a[j];
+               a[j]=t;
+           }
+       }
+   }
+    printf(" SORTED ORDER %s",a);
+    return 0;
+}
+
+
+10.
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char a[]={"aditya"};
+    char freq[125]={0};
+    int i;
+
+    while(a[i]!='\0')
+    {
+        freq[a[i++]]++;
+    }
+    for(i=0;i<125;i++)
+    {
+        if(freq[i] !=0)
+        {
+
+            printf("%c --> %d\n",i,freq[i]);
+        }
+
+    }
+
+    return 0;
+}
+
